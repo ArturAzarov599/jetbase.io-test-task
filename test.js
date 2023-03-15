@@ -19,7 +19,7 @@ const findABenefit = (array) => {
         const indexOfMinValue = array.indexOf(ascendingArraySort[i]);
         const indexOfMaxValue = array.indexOf(value, indexOfMinValue);
 
-        if (indexOfMinValue < indexOfMaxValue && !result.length)
+        if (indexOfMaxValue !== -1 && !result.length)
           result = [
             `min number ${ascendingArraySort[i]}, index: ${indexOfMinValue}`,
             `max number ${value}, index: ${indexOfMaxValue}`,
